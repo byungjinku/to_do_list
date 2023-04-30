@@ -43,7 +43,7 @@ class MyUser(AbstractBaseUser):
     age = models.DateField(null=True, blank=True)
     genders=(('F','female'),
              ('M','male'),)
-    gender=models.CharField(choices=genders, max_length=1)
+    gender=models.CharField(choices=genders, max_length=1,default="M")
     introduction=models.TextField(null=True, blank=True)
 
     is_active = models.BooleanField(default=True)
